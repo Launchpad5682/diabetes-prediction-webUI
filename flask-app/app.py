@@ -31,3 +31,7 @@ def predict_value():
     p = model.predict([lst])
     print(round(p[0][0]))
     return("{}".format(round(p[0][0])))
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
