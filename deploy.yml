@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hex
+  name: hex
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hex
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hex
+    spec:
+      containers:
+      - image: launchpad5682/test-ml:v1
+        name: test-ml
+        resources: {}
+status: {}
